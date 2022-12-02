@@ -40,9 +40,24 @@ function playRound(playerSelection, computerSelection) {
         } else {
             return "You Win! Rock smashes scissors."
         }
-    } 
+    } else if (playerSelection.toUpperCase() == "PAPER") {
+        if (computerSelection == "rock") {
+            return "You Win! Paper covers rock."
+        } else if (computerSelection == "paper") {
+            return "Tie!"
+        } else {
+            return "You lose! Scissors cuts paper."
+        }
+    } else {
+        if (computerSelection == "rock") {
+            return "You lose! Rock smashes scissors."
+        } else if (computerSelection == "paper") {
+            return "You win! Scissors cuts paper."
+        } else {
+            return "Tie!"
+        }
+    }
 }
-
 console.log(playRound(playerSelection,computerSelection))
 
 // create function game() that calls playRound()
