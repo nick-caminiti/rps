@@ -5,7 +5,7 @@ function game() {
     //debugger
     let userScore = 0
     let computerScore = 0
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
         let computerSelection = getComputerChoice();
         let playerSelection = prompt("Let's play Rock, Paper, Scissors.")
         if (testPlayerSelection(playerSelection)) {
@@ -24,10 +24,12 @@ function game() {
             computerScore +=1;
             console.log("You lose this round!");
         }
-        if (i < 2) {
+        if (i < 4) {
         console.log(`Current score is User: ${userScore} to Computer: ${computerScore}`);
+        } else if (userScore > computerScore) {
+            console.log(`Game over! You Win! Final score is User: ${userScore} to Computer: ${computerScore}`);
         } else {
-            console.log(`Game over! Final score is User: ${userScore} to Computer: ${computerScore}`);
+            console.log(`Game over! You Lose :( Final score is User: ${userScore} to Computer: ${computerScore}`);
         }
 
     }
