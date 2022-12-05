@@ -2,15 +2,33 @@ game()
 
 // create function game() that calls playRound()
 function game() {
+    //debugger
+    let userScore = 0
+    let computerScore = 0
     for (let i = 0; i < 3; i++) {
         let computerSelection = getComputerChoice();
         let playerSelection = prompt("Let's play Rock, Paper, Scissors.")
-        testPlayerSelection(playerSelection)
-        let userSCore
-        let computerScore
+        if (testPlayerSelection(playerSelection)) {
+
+        } else {
+            playerSelection = prompt("Invalid entry! Please enter Rock, Paper, or Scissors to play!");
+        }
         console.log("comp: " + computerSelection)
         console.log("user: " + playerSelection)
-        console.log(playRound(playerSelection,computerSelection))
+        let roundResult = playRound(playerSelection,computerSelection)
+        
+        if (roundResult == "userwin") {
+            userScore +=1;
+            console.log("You win this round!");
+        } else {
+            computerScore +=1;
+            console.log("You lose this round!");
+        }
+        if (i < 2) {
+        console.log(`Current score is User: ${userScore} to Computer: ${computerScore}`);
+        } else {
+            console.log(`Game over! Final score is User: ${userScore} to Computer: ${computerScore}`);
+        }
 
     }
     //return "gameover"
@@ -31,10 +49,10 @@ function getComputerChoice() {
 function testPlayerSelection(playerSelection) {
     var regex = /^(rock|paper|scissors)$/i;
     if (regex.test(playerSelection)) {
-
+        return true
     } else {
-        playerSelection = prompt("Invalid entry! Please enter Rock, Paper, or Scissors to play!");
-        testPlayerSelection(playerSelection);
+        
+        return false
     }
 }
     // ask for user input and store choice in variable playerSelection
@@ -45,7 +63,7 @@ function testPlayerSelection(playerSelection) {
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toUpperCase() == "ROCK") {
         if (computerSelection == "rock") {
-            console.log("tie!")
+            console.log("tie!");
             return tie();
         } else if (computerSelection == "paper") {
             return "userloss";
@@ -56,7 +74,7 @@ function playRound(playerSelection, computerSelection) {
         if (computerSelection == "rock") {
             return "userwin";
         } else if (computerSelection == "paper") {
-            console.log("tie!")
+            console.log("tie!");
             return tie();
         } else {
             return "userloss";
@@ -67,7 +85,7 @@ function playRound(playerSelection, computerSelection) {
         } else if (computerSelection == "paper") {
             return "userwin";
         } else {
-            console.log("tie!")
+            console.log("tie!");
             return tie();
         }
     }
@@ -79,7 +97,7 @@ function tie() {
     testPlayerSelection(playerSelection);
     console.log("comp: " + computerSelection);
     console.log("user: " + playerSelection);
-    return playRound (playerSelection, computerSelection);;  
+    return playRound (playerSelection, computerSelection);
 }
 
 
