@@ -1,7 +1,7 @@
-game()
+playGame()
 
 // create function game() that calls playRound()
-function game() {
+function playGame() {
     //debugger
     let userScore = 0
     let computerScore = 0
