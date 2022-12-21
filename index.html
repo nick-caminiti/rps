@@ -3,10 +3,33 @@
     <head>
         <meta charset ="UTF-8">
         <title>Rock, Paper, Scissors</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <h1>Let's Throw</h1>
+        <div class="header">
+            <h1>Let's Throw Hands</h1>
+        </div>
+        <div class="playerOptions" id="buttonArea">
+            <button class="playerOption"><img id="rock" class="pic" src="pics/rock.jpg"></button>
+            <button class="playerOption"><img id="paper" class="pic" src="pics/paper.jpg"></button>
+            <button class="playerOption"><img id="scissors" class="pic" src="pics/scissors.jpg"></button>
+        </div>
+        <br>
+        <div class = "results" id="results">
+            <div class="selections">
+                <div id="userSelection"></div>
+                <div id="CompSelection"></div>
+            </div>
+            <div id="message"></div>
+            <div class ="score" id="score">
+                <ul class="scoreList">
+                    <li id="userScore"></li>
+                    <li id="compScore"></li>
+                </ul>
+            </div>
+            <div id="finalMessage"></div>
+        </div>
     </body>
 
     <script src="javascript.js"></script>
