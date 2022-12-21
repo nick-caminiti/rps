@@ -10,13 +10,14 @@ body {
     display: flex;
     justify-content: center;
     background-color: lightblue;
+    font-size: 36px;
 }
 
 .playerOptions {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: tan;
 }
 
@@ -28,7 +29,7 @@ body {
 }
 
 .pic {
-    width: 100px;
+    width: 175px;
     border-radius: 10px;
     padding: none;
     margin: none;
@@ -53,7 +54,7 @@ ul {
     display: flex;
     justify-content: center;
     padding-top: 30px;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: bold;
 }
 
@@ -63,15 +64,22 @@ ul {
 }
 
 .score {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 #finalMessage {
     display: flex;
     justify-content: center;
     padding-top: 30px;
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
 }
 
+.selection {
+    font-size: 20px;
+}
 
+.score {
+    font-size: 22px;
+    color: rgb(37, 6, 215);
+}
