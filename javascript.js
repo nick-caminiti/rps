@@ -10,7 +10,7 @@ const compScoreDisplay = document.getElementById("compScore")
 let userScore = 0
 let computerScore = 0
 
-
+ 
 buttonArea.addEventListener('click', function (e) {
     if (e.target.id == "rock" || e.target.id == "paper" || e.target.id == "scissors") {
         if ((userScore + computerScore) == 5) {
