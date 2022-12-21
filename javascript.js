@@ -21,8 +21,8 @@ buttonArea.addEventListener('click', function (e) {
 
         let computerChoice = getComputerChoice()
         let roundResult = playRound(e.target.id, computerChoice)
-        userSelectionDisplay.textContent = "You picked: " + e.target.id
-        CompSelectionDisplay.textContent = "The computer picked: " + computerChoice
+        userSelectionDisplay.textContent = "Your pick: " + e.target.id
+        CompSelectionDisplay.textContent = "Computer pick: " + computerChoice
         userScoreDisplay.textContent = `Your Score: ${userScore}`;
         compScoreDisplay.textContent =`Computer Score: ${computerScore}`;
 
